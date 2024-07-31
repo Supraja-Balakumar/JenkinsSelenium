@@ -9,6 +9,8 @@ import java.util.Map;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,14 +28,14 @@ class Addevent {
 	private Map<String, Object> vars;
 	JavascriptExecutor js;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws MalformedURLException {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}

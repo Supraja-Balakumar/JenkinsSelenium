@@ -1,6 +1,8 @@
 package com.supraja.AlumniSelenium;
 
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.Before;
 import org.junit.After;
 import static org.junit.Assert.*;
@@ -26,14 +28,14 @@ class Updateevent {
 	private Map<String, Object> vars;
 	JavascriptExecutor js;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws MalformedURLException {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
