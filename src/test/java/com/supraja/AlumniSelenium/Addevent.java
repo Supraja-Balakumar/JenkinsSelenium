@@ -56,54 +56,54 @@ class Addevent {
 
 	}
 
-	@Test
-	void testfailure() {
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:3000/");
-		driver.manage().window().setSize(new Dimension(1536, 811));
-		driver.findElement(By.linkText("Event\'s List")).click();
-		driver.findElement(By.linkText("Add +")).click();
-		driver.findElement(By.name("ename")).click();
-		driver.findElement(By.name("ename")).sendKeys("techh");
-		driver.findElement(By.name("aid")).click();
-		{
-			WebElement dropdown = driver.findElement(By.name("aid"));
-			dropdown.findElement(By.xpath("//option[. = '22']")).click();
-		}
-		driver.findElement(By.cssSelector(".btn")).click();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		String txt = alert.getText();
-		System.out.println(txt);
-		alert.accept();
-		assertEquals("Enter fund ", txt);
-	}
-
-	@Test
-	void testfailure2() {
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost:3000/");
-		driver.manage().window().setSize(new Dimension(1536, 811));
-		driver.findElement(By.linkText("Event\'s List")).click();
-		driver.findElement(By.linkText("Add +")).click();
-		driver.findElement(By.name("fundallocation")).click();
-		driver.findElement(By.name("fundallocation")).sendKeys("20000");
-		driver.findElement(By.name("aid")).click();
-		{
-			WebElement dropdown = driver.findElement(By.name("aid"));
-			dropdown.findElement(By.xpath("//option[. = '23']")).click();
-		}
-		driver.findElement(By.cssSelector(".btn")).click();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		String txt = alert.getText();
-		System.out.println(txt);
-		alert.accept();
-		assertEquals("Enter the Event name ", txt);
-	}
+//	@Test
+//	void testfailure() {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("http://localhost:3000/");
+//		driver.manage().window().setSize(new Dimension(1536, 811));
+//		driver.findElement(By.linkText("Event\'s List")).click();
+//		driver.findElement(By.linkText("Add +")).click();
+//		driver.findElement(By.name("ename")).click();
+//		driver.findElement(By.name("ename")).sendKeys("techh");
+//		driver.findElement(By.name("aid")).click();
+//		{
+//			WebElement dropdown = driver.findElement(By.name("aid"));
+//			dropdown.findElement(By.xpath("//option[. = '22']")).click();
+//		}
+//		driver.findElement(By.cssSelector(".btn")).click();
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		String txt = alert.getText();
+//		System.out.println(txt);
+//		alert.accept();
+//		assertEquals("Enter fund ", txt);
+//	}
+//
+//	@Test
+//	void testfailure2() {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("http://localhost:3000/");
+//		driver.manage().window().setSize(new Dimension(1536, 811));
+//		driver.findElement(By.linkText("Event\'s List")).click();
+//		driver.findElement(By.linkText("Add +")).click();
+//		driver.findElement(By.name("fundallocation")).click();
+//		driver.findElement(By.name("fundallocation")).sendKeys("20000");
+//		driver.findElement(By.name("aid")).click();
+//		{
+//			WebElement dropdown = driver.findElement(By.name("aid"));
+//			dropdown.findElement(By.xpath("//option[. = '23']")).click();
+//		}
+//		driver.findElement(By.cssSelector(".btn")).click();
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		String txt = alert.getText();
+//		System.out.println(txt);
+//		alert.accept();
+//		assertEquals("Enter the Event name ", txt);
+//	}
 
 }

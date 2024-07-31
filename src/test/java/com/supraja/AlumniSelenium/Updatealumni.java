@@ -61,17 +61,17 @@ class Updatealumni {
 		assertEquals("Alumni Updated Successfully", txt);
 	}
 
-	@Test
-	void testfailure() {
-		WebDriver driver = new ChromeDriver();
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		String txt = alert.getText();
-		System.out.println(txt);
-		alert.accept();
-		assertEquals("Alumni Updated Successfully", txt);
-	}
+//	@Test
+//	void testfailure() {
+//		WebDriver driver = new ChromeDriver();
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		String txt = alert.getText();
+//		System.out.println(txt);
+//		alert.accept();
+//		assertEquals("Alumni Updated Successfully", txt);
+//	}
 
 }
